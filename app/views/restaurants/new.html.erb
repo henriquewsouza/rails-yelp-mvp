@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <div class="banner">
+    <%= image_tag("banner.jpg", alt: "Banner") %>
+  </div>
+</div>
+
+<div class="container mt-2 mb-5">
+  <h1 class="mb-5">New Restaurant</h1>
+
+  <%= render "form", restaurant: @restaurant %>
+
+  <div>
+    <%= link_to "Back to restaurants", restaurants_path, class: "btn btn-primary mt-3" %>
+  </div>
+</div>

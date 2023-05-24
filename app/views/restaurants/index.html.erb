@@ -1,0 +1,26 @@
+<div class = "container-fluid">
+  <div class="banner">
+      <%= image_tag("banner.jpg", alt: "Banner") %>
+  </div>
+</div>
+
+<div class="container mt-2 mb-5">
+
+
+  <h1 class="mb-5">Restaurants</h1>
+
+  <div id="restaurants" class="row">
+    <% @restaurants.each do |restaurant| %>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= restaurant.name %></h5>
+            <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <%= link_to "New restaurant", new_restaurant_path, class: "btn btn-success mt-3" %>
+</div>
